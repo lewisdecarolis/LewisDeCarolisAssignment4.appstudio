@@ -22,7 +22,7 @@ drpdnStates.onclick=function(s){
     return                     // but no selection made yet so do nothing
   } else {                     // a selection made
     drpdnStates.value = s     // make dropdown show choice the user made
-    console.log(`The user chose ${s} and .selection is ${drpdnStates.selection}.`)
+    txtaCustomer.value = (`The user chose ${s} and .selection is ${drpdnStates.selection}.`)
   }
 }
 
@@ -36,16 +36,16 @@ let databaseSchema = "lsd81882"
 
 
 btnStates.onclick=function(){
-    query = "SELECT state FROM customer"
+    query = "SELECT name, state FROM customer"
     // Below change from my netID to yours (twice: user and database)    
     req = Ajax("https://ormond.creighton.edu/courses/375/ajax-connection.php", "POST", "host=ormond.creighton.edu&user=lsd81882&pass=" + pw + "&database=lsd81882&query=" + query)
 
     if (req.status == 200) { //transit trip worked.        
            // see JSON results
-           console.log(`req.responseText is a JSON string that looks like this: ${req.responseText}`)
+           txtaCustomer.textContent = (`req.responseText is a JSON string that looks like this: ${req.responseText}`)
         results = JSON.parse(req.responseText)
            // see if results are correct
-           console.log(`The parsed JSON string is converted to a JS object (an array of arrays): ${results} where results[0] is ${results[0]}, the first array in the JS results object.`)
+           txtaCustomer.value = (`The parsed JSON string is converted to a JS object (an array of arrays): ${results} where results[0] is ${results[0]}, the first array in the JS results object.`)
         
         if (results.length == query)    // no results were returned by the query
            lblMessage1.textContent = "There are no accounts in the database."
@@ -53,8 +53,8 @@ btnStates.onclick=function(){
 
 
             // Take a closer look:
-            txtaCustomer.value = (`the first row/item in the big array is a small array: ${results[0]}`)
-            txtaCustomer.value = (`to get to Paul, need results[0][1]: ${results[0][1]}`)
+            console.log(`the first row/item in the big array is a small array: ${results[0]}`)
+            console.log(`to get to Paul, need results[0][1]: ${results[0][1]}`)
 
 
         // Now output the names of all the dogs into the textArea control:
