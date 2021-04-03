@@ -26,6 +26,14 @@
             "states",
             "states.json"
           ]
+        },
+        {
+          "!type": "External",
+          "file": [
+            "forms",
+            "deleteCustomer",
+            "deleteCustomer.json"
+          ]
         }
       ],
       "configxml": null,
