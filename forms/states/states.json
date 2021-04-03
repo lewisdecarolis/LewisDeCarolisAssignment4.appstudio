@@ -34,15 +34,6 @@
         "forms",
         "states",
         "Elements",
-        "btnStates.json"
-      ]
-    },
-    {
-      "!type": "External",
-      "file": [
-        "forms",
-        "states",
-        "Elements",
         "lblMessage1.json"
       ]
     }
