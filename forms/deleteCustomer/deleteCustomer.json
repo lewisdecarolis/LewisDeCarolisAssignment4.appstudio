@@ -9,7 +9,53 @@
   "borderWidth": "",
   "cached_js": null,
   "cached_js_script_hash": null,
-  "children": [],
+  "children": [
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "deleteCustomer",
+        "Elements",
+        "btnRefresh.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "deleteCustomer",
+        "Elements",
+        "lblMessage2.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "deleteCustomer",
+        "Elements",
+        "lblCust.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "deleteCustomer",
+        "Elements",
+        "inptCust.json"
+      ]
+    },
+    {
+      "!type": "External",
+      "file": [
+        "forms",
+        "deleteCustomer",
+        "Elements",
+        "btnDelete.json"
+      ]
+    }
+  ],
   "class": "",
   "designHeight": 0,
   "designWidth": 0,

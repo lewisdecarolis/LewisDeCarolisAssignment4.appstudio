@@ -1,7 +1,7 @@
 
 let req = ""
 let query = ""
-let results = ""
+let results = []
 let pw = "applicationDevelopment" 
 let netID = "lsd81882"
 let databaseSchema = "lsd81882" 
